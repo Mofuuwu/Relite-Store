@@ -1,0 +1,585 @@
+<header class="header">
+        <div class="logo" style="display: flex;">
+            <img src="../public/assets/icon-relite.png" alt="">
+            <h2>Relite Store</h2>
+        </div>
+        <input type="checkbox" id="menu-check">
+        <label for="menu-check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <nav class="navbar">
+            <a href="#home" style="--i:0" class="active">Home</a>
+            <a href="../public/home/ctr" style="--i:1">Check Transaction</a>
+            <a href="/user/login.html" style="--i:2">Login</a>
+        </nav>
+    </header>
+<div class="bg-event" style="background: url(../public/assets/ling.gif); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <div class="container-event" style="height: auto; padding: 5% 0% 5%; background-color: rgba(0, 0, 0, .7); border-radius: -15px; ">
+        <div class="wrapper-content" id="first" style="margin: 5% 0 1%; padding: 0 10%;">
+            <p class="judul space">Latest <span style="color: #f4b446;">Event</span></p>
+            <!-- <p class="sub-judul space">Stay in the game and stay ahead!. Explore our explosive events! Embark on a gaming adventure like no other and join us in celebrating the spirit of gaming with our exclusive series of events</p> -->
+            <div class="line-block">
+                <div class="line space"></div>
+                <div class="block"></div>
+            </div>
+        </div>
+        
+        <div class="swiper-container" data-aos="fade-up" data-aos-duration="900">
+                    <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <a href="#" class="swiper-slide"><img src="../public/assets/event/mlbb-x-ducati.jpg" alt=""></a>
+                    <a class="swiper-slide"><img src="../public/assets/event/relbg.jpg" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="../public/assets/event/mlbb-x-ducati.jpg" alt=""></a>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <!--<div class="swiper-button-prev"></div> 
+                <div class="swiper-button-next"></div> -->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-blackbrown" style="border-radius: 25px; margin-top: -1.5%;">
+        <div class="wrapper-content" id="home" style="margin: 5% 0 1%; padding: 0 10%;">
+            <p class="judul space">Find Your <span style="color: #f4b446;">Game</span></p>
+            <!-- <p class="sub-judul space">Unleash your gaming potential with Relite Store. Dominate leaderboards and gain a competitive edge! Power up your arsenal, unlock exclusive items, and elevate your gaming experience with a few taps.</p> -->
+            <div class="line-block">
+                <div class="line space"></div>
+                <div class="block"></div>
+            </div>
+        </div>
+        <div class="container-nav-page">
+            <a class="nav-page padding-box" onclick="tampilkanGame()" id="nav-game">Game</a>
+            <a class="nav-page padding-box" onclick="tampilkanAplikasi()" id="nav-apk">Aplikasi</a>
+            <a href="#promo" class="nav-page padding-box">Promo</a>
+            <a href="#footer" class="nav-page padding-box">Tentang</a>
+            <a id="search-game" class="nav-page" style="width: 45%;" ><input id="search-input" type="text" placeholder="Search"></a>
+        </div>
+        <div class="card-container" id="game" data-aos="fade-up" data-aos-duration="900" data-aos-offset="0">
+
+            <?php 
+                foreach ($data['game'] as $game) :
+            ?>
+            <a class="card" href="../public/order/<?= $game['route'] ?>">
+                <img src="../public/assets/ICON/<?= $game['icon_game']; ?>" alt="">
+                <h2><?= $game['nama_game'] ?></h2>
+                <div class="bg-card"></div>
+            </a>
+            <?php
+                endforeach;
+            ?>
+        </div>
+
+        <div class="card-container" id="aplikasi">
+            <a class="card" href="../public/order/netflik">
+                <img src="../public/assets/ICON/netflix.png" alt="">
+                <h2>Netflik Premium</h2>
+                <div class="bg-card"></div>
+            </a>
+            <a class="card" href="../public/order/spotify">
+                <img src="../public/assets/ICON/spotify.png" alt="">
+                <h2>Spotify Premium</h2>
+                <div class="bg-card"></div>
+            </a>
+            <a class="card" href="../public/order/steam">
+                <img src="../public/assets/ICON/steam.jpg" alt="" style="background-color: white;">
+                <h2>Voucher Steam</h2>
+                <div class="bg-card"></div>
+            </a>
+            <a class="card" href="../public/order/youtube">
+                <img src="../public/assets/ICON/yt.png" alt="">
+                <h2>Youtube Premium</h2>
+                <div class="bg-card"></div>
+            </a>
+        </div>
+</div>
+
+
+    <div class="wrapper-content" id="promo">
+        <p class="judul space">Flash <span style="color: #f4b446;">Sale</span></p>
+        <!-- <p class="sub-judul space">Gear up for an electrifying gaming experience with our exclusive Flash Sale on top-up games!</p> -->
+        <div class="line-block">
+            <div class="line space"></div>
+            <div class="block"></div>
+        </div>
+    </div>
+    
+    <div class="container-promo">
+        <a class="card-promo" href="/order/mlbb.html">
+            <div class="img-card-promo" style="background-image: url(../public/assets/ICON/mlbb.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; "></div>
+            <div class="content-card-promo">
+                <p class="title spacing-content-card-promo">257 Diamond</p>
+                <p class="actual-price spacing-content-card-promo">Rp 65.000</p>
+                <p class="discount-price spacing-content-card-promo">Rp 63.000</p>
+            </div>
+        </a>
+        <a class="card-promo" href="/order/mlbb.html">
+            <div class="img-card-promo" style="background-image: url(../public/assets/ICON/mlbb.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; "></div>
+            <div class="content-card-promo">
+                <p class="title spacing-content-card-promo">284 Diamond</p>
+                <p class="actual-price spacing-content-card-promo">Rp 68.000</p>
+                <p class="discount-price spacing-content-card-promo">Rp 65.000</p>
+            </div>
+        </a>
+        <a class="card-promo" href="/order/genshin.html">
+            <div class="img-card-promo" style="background-image: url(../public/assets/ICON/genshin.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; "></div>
+            <div class="content-card-promo">
+                <p class="title spacing-content-card-promo">1x Weekly</p>
+                <p class="actual-price spacing-content-card-promo">Rp 70.000</p>
+                <p class="discount-price spacing-content-card-promo">Rp 63.000</p>
+            </div>
+        </a>
+        <a class="card-promo" href="/order/freefire.html">
+            <div class="img-card-promo" style="background-image: url(../public/assets/ICON/freefire.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; "></div>
+            <div class="content-card-promo">
+                <p class="title spacing-content-card-promo">355 Diamond</p>
+                <p class="actual-price spacing-content-card-promo">Rp 60.000</p>
+                <p class="discount-price spacing-content-card-promo">Rp 50.000</p>
+            </div>
+        </a>
+        <a class="card-promo" href="/order/freefire.html">
+            <div class="img-card-promo" style="background-image: url(../public/assets/ICON/freefire.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; "></div>
+            <div class="content-card-promo">
+                <p class="title spacing-content-card-promo">720 Diamond</p>
+                <p class="actual-price spacing-content-card-promo">Rp 105.000</p>
+                <p class="discount-price spacing-content-card-promo">Rp 99.000</p>
+            </div>
+        </a>
+        <a class="card-promo" href="/order/undawn.html">
+            <div class="img-card-promo" style="background-image: url(../public/assets/ICON/undawn.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; "></div>
+            <div class="content-card-promo">
+                <p class="title spacing-content-card-promo">Kartu Mingguan</p>
+                <p class="actual-price spacing-content-card-promo">Rp 35.000</p>
+                <p class="discount-price spacing-content-card-promo">Rp 31.000</p>
+            </div>
+        </a>
+        <a class="card-promo" href="/order/valo.html">
+            <div class="img-card-promo" style="background-image: url(../public/assets/ICON/valorant.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; "></div>
+            <div class="content-card-promo">
+                <p class="title spacing-content-card-promo">420 Points</p>
+                <p class="actual-price spacing-content-card-promo">Rp 55.000</p>
+                <p class="discount-price spacing-content-card-promo">Rp 52.000</p>
+            </div>
+        </a>
+        <a class="card-promo" href="/order/metal-slug.html">
+            <div class="img-card-promo" style="background-image: url(../public/assets/ICON/metalslug.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; "></div>
+            <div class="content-card-promo">
+                <p class="title spacing-content-card-promo">Support Pass</p>
+                <p class="actual-price spacing-content-card-promo">Rp 70.000</p>
+                <p class="discount-price spacing-content-card-promo">Rp 65.000</p>
+            </div>
+        </a>
+      
+    </div>
+
+    <div class="bg-blackbrown">
+        <div class="wrapper-content">
+            <p class="judul space">Game <span style="color: #f4b446;">Market</span></p>
+            <!-- <p class="sub-judul space"> Enhance your gaming experience directly by purchasing accounts from multiple sellers!</p> -->
+            <div class="line-block">
+                <div class="line space"></div>
+                <div class="block"></div>
+            </div>
+        </div>
+        <div class="gamemarket-container">
+            <h2 class="gm-h">Rekomendasi Game</h2>
+            <div class="gm-row">
+                <div class="gm-card">
+                    <div class="gmc-img">
+                        <img src="../public/assets/ICON/codm.jpg" alt="">
+                    </div>
+                    <div class="gmc-content">
+                        <h5 class="gmc-h">Akun Genshin murah meriah ar 30 jean c6</h5>
+                        <p class="gmc-p">Rp. 200.000</p>
+                        <div class="gmc-v">
+                            <a class="view">Lihat Akun</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gm-card">
+                    <div class="gmc-img">
+                        <img src="../public/assets/ICON/codm.jpg" alt="">
+                    </div>
+                    <div class="gmc-content">
+                        <h5 class="gmc-h">Akun Genshin murah meriah ar 30 jean c6</h5>
+                        <p class="gmc-p">Rp. 200.000</p>
+                        <div class="gmc-v">
+                            <a class="view">Lihat Akun</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gm-card">
+                    <div class="gmc-img">
+                        <img src="../public/assets/ICON/codm.jpg" alt="">
+                    </div>
+                    <div class="gmc-content">
+                        <h5 class="gmc-h">Akun Genshin murah meriah ar 30 jean c6</h5>
+                        <p class="gmc-p">Rp. 200.000</p>
+                        <div class="gmc-v">
+                            <a class="view">Lihat Akun</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gm-card">
+                    <div class="gmc-img">
+                        <img src="../public/assets/ICON/codm.jpg" alt="">
+                    </div>
+                    <div class="gmc-content">
+                        <h5 class="gmc-h">Akun Genshin murah meriah ar 30 jean c6</h5>
+                        <p class="gmc-p">Rp. 200.000</p>
+                        <div class="gmc-v">
+                            <a class="view">Lihat Akun</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gm-card">
+                    <div class="gmc-img">
+                        <img src="../public/assets/ICON/codm.jpg" alt="">
+                    </div>
+                    <div class="gmc-content">
+                        <h5 class="gmc-h">Akun Genshin murah meriah ar 30 jean c6</h5>
+                        <p class="gmc-p">Rp. 200.000</p>
+                        <div class="gmc-v">
+                            <a class="view">Lihat Akun</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gm-card">
+                    <div class="gmc-img">
+                        <img src="../public/assets/ICON/codm.jpg" alt="">
+                    </div>
+                    <div class="gmc-content">
+                        <h5 class="gmc-h">Akun Genshin murah meriah ar 30 jean c6</h5>
+                        <p class="gmc-p">Rp. 200.000</p>
+                        <div class="gmc-v">
+                            <a class="view">Lihat Akun</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gm-seeall">
+                <a href="#" class="gm-button">See All</a>
+            </div>
+        </div>
+    </div>
+
+        <div class="wrapper-content">
+            <p class="judul space">Other <span style="color: #f4b446;">Services</span></p>
+            <!-- <p class="sub-judul space"> Pay instantly. Get instant delivery. Legal and reliable. Relite Store offers three game-changing benefits. Enjoy seamless gaming without distractions.</p> -->
+            <div class="line-block">
+                <div class="line space"></div>
+                <div class="block"></div>
+            </div>
+        </div>
+        <div class="container-card-why">
+            <div class="card-why">
+                <ion-icon class="icon-why" name="time-outline"></ion-icon>
+                <p class="judul-kecil">Pay within seconds</p>
+                <p class="sub-judul-kecil">Pay instantly with Relite. No more waiting or delays.</p>
+            </div>
+            <div class="card-why">
+                <ion-icon class="icon-why" name="flash-outline"></ion-icon>
+                <p class="judul-kecil">Instant delivery</p>
+                <p class="sub-judul-kecil">Get instant access to game credits and dive into the action right away.</p>
+            </div>
+            <div class="card-why">
+                <ion-icon class="icon-why" name="shield-checkmark-outline"></ion-icon>
+                <p class="judul-kecil">Legal Platform</p>
+                <p class="sub-judul-kecil">Enjoy a legitimate gaming environment that follows all regulations.</p>
+            </div>
+        </div>
+
+        <div class="bg-blackbrown">
+        <div class="wrapper-content">
+            <p class="judul space">Our <span style="color: #f4b446;">Testimoni</span></p>
+            <!-- <p class="sub-judul space">Some trusted ratings from our costumers</p> -->
+            <div class="line-block">
+                <div class="line space"></div>
+                <div class="block"></div>
+            </div>
+        </div>
+        <div class="ratings-row">
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <div class="ratings-card">
+                            <div class="ratings-content">
+                                <p class="ratings-user">Solihin</p>
+                                <p class="ratings-orsess">Transaksi Sukses : 8</p>
+                            </div>
+                            <div class="ratings">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="ratings-card">
+                            <div class="ratings-content">
+                                <p class="ratings-user">Sudarno</p>
+                                <p class="ratings-orsess">Transaksi Sukses : 20</p>
+                            </div>
+                            <div class="ratings">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="ratings-card">
+                            <div class="ratings-content">
+                                <p class="ratings-user">Aris Junaidi</p>
+                                <p class="ratings-orsess">Transaksi Sukses : 12</p>
+                            </div>
+                            <div class="ratings">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="ratings-card">
+                            <div class="ratings-content">
+                                <p class="ratings-user">Zaenalz</p>
+                                <p class="ratings-orsess">Transaksi Sukses : 87</p>
+                            </div>
+                            <div class="ratings">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="ratings-card">
+                            <div class="ratings-content">
+                                <p class="ratings-user">Hasanz</p>
+                                <p class="ratings-orsess">Transaksi Sukses : 40</p>
+                            </div>
+                            <div class="ratings">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="ratings-card">
+                            <div class="ratings-content">
+                                <p class="ratings-user">Yonz</p>
+                                <p class="ratings-orsess">Transaksi Sukses : 12</p>
+                            </div>
+                            <div class="ratings">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="slide">
+                        <div class="ratings-card">
+                            <div class="ratings-content">
+                                <p class="ratings-user">Solihin</p>
+                                <p class="ratings-orsess">Transaksi Sukses : 8</p>
+                            </div>
+                            <div class="ratings">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="ratings-card">
+                            <div class="ratings-content">
+                                <p class="ratings-user">Sudarno</p>
+                                <p class="ratings-orsess">Transaksi Sukses : 20</p>
+                            </div>
+                            <div class="ratings">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="ratings-card">
+                            <div class="ratings-content">
+                                <p class="ratings-user">Aris Junaidi</p>
+                                <p class="ratings-orsess">Transaksi Sukses : 12</p>
+                            </div>
+                            <div class="ratings">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="ratings-card">
+                            <div class="ratings-content">
+                                <p class="ratings-user">Zaenalz</p>
+                                <p class="ratings-orsess">Transaksi Sukses : 87</p>
+                            </div>
+                            <div class="ratings">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="ratings-card">
+                            <div class="ratings-content">
+                                <p class="ratings-user">Hasanz</p>
+                                <p class="ratings-orsess">Transaksi Sukses : 40</p>
+                            </div>
+                            <div class="ratings">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="ratings-card">
+                            <div class="ratings-content">
+                                <p class="ratings-user">Yonz</p>
+                                <p class="ratings-orsess">Transaksi Sukses : 12</p>
+                            </div>
+                            <div class="ratings">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="add-ratings"><ion-icon name="add" style="--ionicon-stroke-width: 60px;"></ion-icon>Tambahkan Rating</div>
+    </div>
+    <div class="tambah-rating-container" style="background-color: rgb(8, 6, 44); color: white; border-radius: 10px; width: fit-content; height: fit-content; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2% 5%; gap: 10px; border: 3px solid #f4b446; position: absolute; left: 50%; transform: translate(-50%, -150%);">
+        <h5 >Seberapa puas anda menggunakan web kami?</h5>
+        <div class="kasih-rating" style="cursor: pointer; font-size: 20px;">
+            <ion-icon name="star" onclick="handleStarRating(1)"></ion-icon>
+            <ion-icon name="star" onclick="handleStarRating(2)"></ion-icon>
+            <ion-icon name="star" onclick="handleStarRating(3)"></ion-icon>
+            <ion-icon name="star" onclick="handleStarRating(4)"></ion-icon>
+            <ion-icon name="star" onclick="handleStarRating(5)"></ion-icon>
+        </div>
+        <button id="send-rating-button" style="padding: 2% 3%; border-radius: 10px; outline: none; border: none; cursor: pointer; border: 3px solid #f4b446;">Kirim</button>
+    </div>
+    
+
+    <div class="footer-container" id="footer">
+        <div class="footer-2">
+            <div class="footer-brand">
+                <img src="../public/assets/icon-relite.png" alt="">
+                <h2 class="judul-kecil-tebal">Relite Store</h2>
+            </div>
+            <div class="brand-description">
+                <p class="sub-judul-kecil">Relite Store is a window to the limitless world of gaming entertaiment. With our services, you can easily enhance your gaming experience. We provide fast and secure acces to a variety of popular games, so you can continue to indulge in your favourite gaming adventures.</p>
+            </div>
+        </div>
+        <div class="footer-1">
+            <h2 class="judul-kecil-tebal" style="margin-top: 8%;">Useful Links</h2>
+            <div class="footer-useful-links">
+                <ul>
+                    <li><a class="footer-links" href="#home">Home</a></li>
+                    <li><a class="footer-links" href="">Login</a></li>
+                    <li><a class="footer-links" href="">Register</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer-1">
+            <h2 class="judul-kecil-tebal" style="margin-top: 8%;">Contact Us</h2>
+            <div class="contact-us">
+                <a href=""><ion-icon name="logo-whatsapp"></ion-icon></a>
+                <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+            </div>
+        </div>
+    </div>
+
+    
+  <script src="../public/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init(
+        
+    );
+  </script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+        effect: "coverflow",
+        grabCursor : true,
+        centeredSlides : true,
+        coverflowEffect : {
+            rotate : 0,
+            stretch : 0,
+            modifier : 5,
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction:false,
+        },
+    // Optional parameters
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+    //   el: '.swiper-pagination',
+      clickable: 'true',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    });
+  </script>
+
+
+

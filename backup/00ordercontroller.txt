@@ -1,0 +1,98 @@
+   
+    // public function mlbb() {
+    //     $data['judul'] = "Mobile Legends";
+    //     $data['game'] = $this->model('Game_model')->getAllGame();
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/mlbb', $data);
+    //     $this->view('templates/footer', $data); 
+    // }
+    // public function aov() {
+    //     $data['judul'] = "Arena of Valor";
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/aov');
+    //     $this->view('templates/footer', $data); 
+    // }
+    // public function codm() {
+    //     $data['judul'] = "Call of Duty Mobile";
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/codm');
+    //     $this->view('templates/footer', $data); 
+    // }
+    // public function fifa() {
+    //     $data['judul'] = "Fifa Mobile";
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/fifa');
+    //     $this->view('templates/footer', $data); 
+    // }
+    // public function freefire() {
+    //     $data['judul'] = "Free Fire";
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/freefire');
+    //     $this->view('templates/footer', $data); 
+    // }
+    // public function genshin() {
+    //     $data['judul'] = "Genshin Impact";
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/genshin');
+    //     $this->view('templates/footer', $data); 
+    // }
+    // public function metalslug() {
+    //     $data['judul'] = "Metal Slug Awakening";
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/metalslug');
+    //     $this->view('templates/footer', $data); 
+    // }
+    // public function valorant() {
+    //     $data['judul'] = "Valorant";
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/valorant');
+    //     $this->view('templates/footer', $data); 
+    // }
+    // public function undawn() {
+    //     $data['judul'] = "Garena Undawn";
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/undawn');
+    //     $this->view('templates/footer', $data); 
+    // }
+    // public function wildrift() {
+    //     $data['judul'] = "Wild Rift";
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/wildrift');
+    //     $this->view('templates/footer', $data); 
+    // }
+    // public function hi3() {
+    //     $data['judul'] = "Honkai Impact 3";
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/hi3');
+    //     $this->view('templates/footer', $data); 
+    // }
+    // public function hsr() {
+    //     $data['judul'] = "Honkai Star Rail";
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/hsr');
+    //     $this->view('templates/footer', $data); 
+    // }
+    // public function netflik() {
+    //     $data['judul'] = "Netflik";
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/netflik');
+    //     $this->view('templates/footer', $data); 
+    // }
+    // public function spotify() {
+    //     $data['judul'] = "Spotify";
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/spotify');
+    //     $this->view('templates/footer', $data); 
+    // }
+    // public function steam() {
+    //     $data['judul'] = "Steam";
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/steam');
+    //     $this->view('templates/footer', $data); 
+    // }
+    // public function youtube() {
+    //     $data['judul'] = "Youtube";
+    //     $this->view('templates/header2', $data);
+    //     $this->view('order/youtube');
+    //     $this->view('templates/footer', $data); 
+    // }

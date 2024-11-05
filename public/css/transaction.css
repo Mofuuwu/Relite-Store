@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+:root {
+    --primary--color: #2E2E2E;
+    --bg--color: #0b0a0c;
+    --font--clr: #ffffff;
+    --main-color: #13bbff;
+    --bg-gradient: background: rgb(40,30,80); background: linear-gradient(90deg, rgba(40,30,80,1) 0%, rgba(65,54,133,1) 100%);
+    --box-color : #f13573;
+    --bg-2: #35307c;
+    --bgg : #281350;
+    --bgg-5 : #0d1748;
+    --bggg : #121e5a;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: var(--bgg-5);
+    text-decoration: none;
+    box-sizing: border-box;
+    padding-top: 40vh;
+    padding-bottom: 10vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.back-wrapper {
+    
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2%;
+}
+/* .back-container {
+    
+} */
+.back-button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    background: rgb(12,26,83);
+    color: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba(1, 1, 1, 0);
+}
+
+.back-button ion-icon {
+    font-size: 30px;
+}
+input:focus {
+    outline: none;
+    border: none;
+}
+
+
+.bg-decoration {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .5;
+    top: 0;
+}
+
+.header-game {
+    background: rgb(12,26,83);
+    background: linear-gradient(360deg, rgba(12,26,83,0) 0%, rgba(14,47,152,1) 80%);
+    z-index: 10;
+    position: relative;
+    width: 80%;
+    height: fit-content;
+    display: flex;    
+    align-items: center;
+    padding: 3%;
+    border-radius: 15px;
+    margin: 0 auto;
+    
+}
+@media screen and (max-width:800px){
+   
+        
+    .bg-decoration {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 30%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        opacity: .5;
+        top: 0;
+    }
+    .header-game {
+        margin-top: -15vh;
+    }
+}
+
+.game-icon {
+    width: 25%;
+    height: 100%;
+    border-radius: 15px;
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.game-icon img {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+.content-game {
+    width: 75%;
+}
+
+.game-title {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.dev-title {
+    font-size: 20px;
+    color: #0e79b8;
+    font-weight: 500;
+}
+
+.content {
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    gap: 10px;
+    padding: 0 10%;
+}
+
+.instruction {
+    margin-top: 20%;
+    float: left;
+    position: sticky;
+    top: 20%;
+    background-color: var(--bggg);
+    color: white;
+    box-shadow: 0px 0px 1px black;
+    border-radius: 15px;
+    width: 30%;
+    height: fit-content;
+    padding: 3%;
+    word-wrap: break-word;
+}
+
+.instruction h2 {
+    font-size: 20px;
+    color: #f4b446;
+}
+
+.instruction h3 {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 5%;
+}
+
+.instruction P {
+    font-size: 12px;
+}
+
+.form-account {
+    margin-top: 10px;
+    width: 70%;
+}
+
+.account-data, .nominal, .payment-container{
+    height: fit-content;
+    background-color: var(--bggg);
+    padding-bottom: 2%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 1px black;
+    margin-bottom: 10px;
+}
+.header {
+    position: relative;
+    width: 100%;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #1f3396;
+    border-radius: 15px 15px 0 0;
+    padding: 2% 3%;
+}
+.header p {
+    margin-left: 15%;
+}
+.h-number {
+    font-size: 20px;
+    border-radius: 10px 0 0 0  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 15%;
+    left: 0;
+    top: 0;
+    background: rgb(54,35,179);
+    background: linear-gradient(90deg, rgba(54,35,179,1) 0%, rgba(25,132,154,1) 100%);
+}
+
+.data {
+    color: white;
+    padding: 2% 3%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    gap: 5px;
+    justify-content: flex-start;
+}
+.data-card {
+    width: calc(50% - 4px);
+}
+
+label {
+    margin-left: 1%;
+}
+.data-card input {
+    border: none;
+    padding: 2% 3%;
+    border-radius: 5px;
+    width: 100%;
+}
+@media screen and (max-width:800px) {
+    .data-card input {
+        padding: 4% 6%;
+        margin-top: 2%;
+    }
+    .header {
+        padding: 4%;
+    }
+}
+
+.content-card-header {
+    width: 100%;
+    padding: 2% 3%;
+    color: #f4b446;
+    font-weight: 500;
+}
+
+.hidden {
+    display: none;
+}
+
+label {
+    margin: 0;
+}
+.content-card {
+    height: auto;
+    cursor: pointer;
+    width: calc(50% - 3px);
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 2% 3%;
+    color: white;
+    background-color: #232f6d;
+    transition: background-color 0.3s;
+}
+
+.content-card.active {
+    background: rgb(95,35,179);
+    background: linear-gradient(90deg, rgba(95,35,179,1) 0%, rgba(25,132,154,1) 100%); 
+}
+
+.price {
+    margin-left: 2%;
+    font-size: 10px;
+    color: #c8c8c8;
+}
+.starting-price {
+    margin-left: 2%;
+    font-size: 10px;
+    text-decoration: line-through;
+    font-weight: 400;
+    color: rgb(175, 54, 54);
+}
+
+
+@media screen and (max-width:800px){
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+    .content-card {
+        padding: 4%;
+    }
+    
+    /* .game-icon {
+    } */
+    .game-title {
+        font-size: 16px;
+    }
+    .dev-title {
+        font-size: 12px;
+    }
+    .content {
+        flex-direction: column;
+        gap: 0;
+    }
+    .instruction {
+        top: 0;
+        margin-top: 10px;
+        width: 100%;
+        position: relative;
+        padding: 5%;
+    }
+    .form-account {
+        margin-top: 10px;
+        width: 100%;
+        position: relative;
+    }
+}   
+
+.payment-container {
+    width: 100%;
+    background-color: #232f6d;
+    border-radius: 15px;
+    padding: 0 0 3%;
+}
+.payment-header {
+    width: 100%;
+    color: white;
+    background-color: #232f6d;
+    padding: 2% 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+ion-icon {
+    font-size: 22px;
+    transition: transform 0.3s;
+}
+
+.payment-method {
+    background-color: #1c275f;
+}
+
+.payment-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 2% 3%;
+    justify-content: flex-start;
+}
+.payment-card {
+    border-radius: 5px;
+    width: calc(33.33% - 7px);
+    padding: 2% 3%;
+    background-color:#fcfcfc ;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.payment-card.active {
+    background-color: #1f3396;
+    color: white;
+}
+
+.paycard {
+    width: 50%;
+}
+.paycard img {
+    max-width: 70%;
+    float: right;
+}
+.pay-provider {
+    font-weight: 600;
+    font-size: 14px;
+}
+.pay-otomatis {
+    font-weight: 400;
+    font-size: 10px;
+}
+.pay-price {
+    font-weight: 500;
+    font-size: 12px;
+}
+@media screen and (max-width:800px){
+    .payment-container {
+        padding: 0 0 5%;
+    }
+    .payment-card {
+        width: calc(50% - 7px);
+        padding: 4% 5%;
+    }
+}
+
+.whatsapp-verif {
+    width: 100%;
+    background-color: #232f6d;
+    border-radius: 15px;
+}
+.whatsapp-container {
+    padding: 2% 3%;
+}
+.whatsapp-container label {
+    background-color:red ;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.no-whatsapp-content input {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 2% 3%;
+    width: 100%;
+    height: 40px;
+}
+
+.no-whatsapp-content input:focus {
+    border: none;
+    outline: none;
+}
+
+.order-submit {
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    padding: 3% 0;
+    background: rgb(54,35,179);
+background: linear-gradient(90deg, rgba(54,35,179,1) 0%, rgba(25,132,154,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.order-submit input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.order-submit ion-icon {
+    font-size: 25px;
+    color: white;
+}
+
+@media screen and (max-width:800px){
+    .header-game {
+        width: 90%;
+    }
+    .content {
+        padding: 0 5%;
+    }
+        
+    .whatsapp-container {
+        padding: 5%;
+    }
+    .content-card {
+        font-size: 12px;
+    }
+}
